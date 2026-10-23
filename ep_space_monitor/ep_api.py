@@ -426,13 +426,24 @@ def parse_question(data: object, identifier: str = "") -> Question | None:
     title, alt = "", ""
     url = None
     expressions = record.get("is_realized_by") or []
+    # Open Data language URIs carry ISO 639-2 codes (ENG, DEU, FRA…), so the
+    # English check must accept both "EN" and "ENG". Prefer the first English
+    # expression that actually has an English title; keep the first English
+    # expression's title as a lesser candidate in case none does.
+    english_first = None  # (title, alt, url) of the first English expression
     for expression in expressions:
         lang = (expression.get("language") or "").rsplit("/", 1)[-1].upper()
-        if lang != "EN":
+        if lang not in ("EN", "ENG"):
             continue
-        title, alt = _expression_titles(expression)
-        url = _expression_document_url(expression)
-        break
+        t, a = _expression_titles(expression)
+        u = _expression_document_url(expression)
+        if english_first is None:
+            english_first = (t, a, u)
+        if t and (expression.get("title") or {}).get("en"):
+            title, alt, url = t, a, u
+            break
+    if not title and english_first and english_first[0]:
+        title, alt, url = english_first
     if not title:  # fall back to any language before giving up
         for expression in expressions:
             title, alt = _expression_titles(expression)
