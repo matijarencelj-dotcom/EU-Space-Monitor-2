@@ -1,0 +1,115 @@
+# EP Space Monitor — weighted space-sector keywords.
+#
+# Every agenda/minutes item is scored against these terms. An item is
+# flagged when the summed weights of matched keywords reach the threshold.
+# Keys are matched case-insensitively; single tokens are matched with word
+# boundaries (so "ESA" does not match inside longer words). Multi-word
+# phrases are matched as substrings of the item text.
+#
+# Weight ideas: 1.0 = weak/context signal, 2-3 = solid signal,
+# 3.5-4 = unmistakably space.
+
+version = 1
+
+[scoring]
+threshold = 2.0
+excerpt_chars = 260
+
+[keywords.en]
+# --- EU Space Programme family ---
+"eu space programme"          = 3.5
+"union space programme"      = 3.5
+"space programme"             = 2.5
+"space programme committee"   = 3.5
+"eu space act"                = 4.0
+"space act"                   = 2.5
+"space package"               = 3.5
+"space regulation"            = 2.0
+
+# --- Programmes & systems ---
+"galileo"                     = 3.0
+"egnos"                        = 3.0
+"copernicus"                   = 3.0
+"iris²"                        = 4.0
+"iris2"                        = 4.0
+"iris squared"                 = 3.0
+"secure connectivity"          = 2.0
+"govsatcom"                    = 3.5
+"satellite navigation"         = 2.5
+"satnav"                       = 2.5
+
+# --- Agencies & institutions ---
+"euspa"                        = 3.5
+"european union agency for the space programme" = 3.5
+"european space agency"        = 3.0
+"esa"                          = 2.0
+"dg defis"                     = 2.0
+"commissioner for defence and space" = 3.0
+
+# --- Policy & sector ---
+"space sector"                 = 3.0
+"space policy"                 = 2.5
+"space strategy"               = 2.5
+"space industry"               = 2.5
+"space economy"                = 2.5
+"space law"                    = 2.5
+"space exploration"            = 2.0
+"space affairs"                = 2.0
+"space policy department"      = 2.5
+
+# --- Launchers & infrastructure ---
+"launcher"                     = 2.0
+"launch vehicle"               = 2.5
+"ariane"                       = 2.5
+"vega"                         = 1.5
+
+# --- Security & safety ---
+"space defence"                = 3.0
+"space defense"                = 3.0
+"defence and space"            = 3.0
+"defense and space"            = 3.0
+"space security"               = 3.0
+"space situational awareness"  = 3.0
+"space surveillance"           = 3.0
+"space debris"                 = 3.0
+"space weather"                = 2.0
+"space safety"                 = 2.0
+
+# --- Generic (weak signals; several are needed to cross the threshold) ---
+"satellite"                    = 2.0
+"satellites"                   = 2.0
+"earth observation"           = 2.0
+"space station"                = 2.0
+"outer space"                  = 1.5
+"space"                        = 1.0
+
+[keywords.fr]
+"programme spatial"            = 3.0
+"politique spatiale"           = 2.5
+"secteur spatial"              = 3.0
+"sécurité spatiale"            = 3.0
+"défense spatiale"             = 3.0
+"satellite"                    = 2.0
+"satellites"                   = 2.0
+"lanceur"                      = 2.0
+"lanceurs"                     = 2.0
+"observation de la terre"      = 2.0
+"galilée"                       = 3.0
+"copernicus"                   = 3.0
+"galileo"                      = 3.0
+"agence spatiale européenne"   = 3.0
+"agence de l'union européenne pour le programme spatial" = 3.5
+
+[keywords.de]
+"weltraumprogramm"             = 3.0
+"weltraumpolitik"              = 2.5
+"weltraumwirtschaft"           = 2.5
+"weltraumsicherheit"           = 3.0
+"weltraumverteidigung"         = 3.0
+"raumfahrt"                    = 2.0
+"satellit"                     = 2.0
+"trägerrakete"                 = 2.5
+"erdbeobachtung"               = 2.0
+"galileo"                      = 3.0
+"kopernikus"                   = 3.0
+"europäische weltraumorganisation" = 3.0

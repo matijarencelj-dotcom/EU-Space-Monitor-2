@@ -1,0 +1,86 @@
+# EP Space Monitor — configuration
+# ESPI (European Space Policy Institute)
+
+[general]
+language = "EN"                     # language variant to fetch (en)
+data_dir = "data"                   # state, findings and dashboard live here
+keywords_file = "keywords.toml"     # weighted keyword list (relative to this file)
+
+[monitor]
+# Source 1 — committee agendas (eMeeting API): items of every published
+# agenda of these committees are scored for space relevance.
+committees = ["ITRE", "SEDE", "TRAN", "BUDG"]
+
+# Daily agenda window: scan committee months covering this many days back
+# and ahead. Future agendas give the early heads-up; meetings without a
+# published agenda yet are watched and retried on every run.
+agenda_lookback_days = 21
+agenda_lookahead_days = 21
+
+# Give up watching a meeting whose agenda never appears within this many
+# days (cancelled meetings, sessions without OJ).
+pending_max_age_days = 30
+
+# Source 2 — parliamentary questions (EP Open Data API): questions tabled
+# within the window are scored on their subject line.
+questions_enabled = true
+questions_lookback_days = 30
+# On the first run, catch up on questions up to this many days back.
+questions_first_run_days = 180
+# Per-run caps (requests are polite and rate-limited).
+questions_max_new = 400
+questions_page_size = 100
+questions_max_pages = 60
+
+# Source 3 — plenary debates (EP Open Data API): title search for these
+# queries; matching debates are scored locally. The endpoint's own date
+# filters are broken (live-verified), so the date window is filtered locally.
+plenary_enabled = true
+plenary_lookback_days = 14
+plenary_queries = ["space", "galileo", "copernicus"]
+plenary_limit_per_query = 25
+
+# Source 4 — EUR-Lex / Council documents (Publications Office CELLAR
+# SPARQL): one query per run over all terms; matching documents are
+# scored locally. Council working-party documents surface here too.
+# No cursor needed: the date window is part of the query itself.
+eurlex_enabled = true
+eurlex_lookback_days = 14
+eurlex_queries = ["space", "galileo", "copernicus"]
+eurlex_limit = 100
+
+# Be polite to the EP servers (seconds between requests, plus retries).
+request_delay_seconds = 0.25
+request_timeout_seconds = 30
+max_retries = 2
+
+# First run backfill horizon for agendas when no state file exists yet.
+first_run_backfill = true
+backfill_months = 6
+
+[dashboard]
+output_path = "data/dashboard.html"
+site_name = "EP Space Monitor"
+
+[email]
+enabled = true
+to = ["matija.rencelj@espi.eu"]
+from = "ep-space-monitor@espi.eu"
+subject_prefix = "EP Space Monitor"
+
+# Brevo (EU SMTP relay). The password/API key is read from the
+# environment variable below (never store it in this file).
+smtp_host = "smtp-relay.brevo.com"
+smtp_port = 587
+smtp_user = ""                      # Brevo account e-mail / SMTP login
+smtp_password_env = "EP_SPACE_MONITOR_SMTP_PASSWORD"
+
+[network]
+# Hard allowlist: the fetcher refuses any other host. The two official
+# JSON APIs replace the old doceo scraping (blocked by EP bot protection).
+allowlist = [
+    "emeeting.europarl.europa.eu",
+    "data.europarl.europa.eu",
+    "publications.europa.eu",
+]
+user_agent = "ESPISpaceMonitor/2.1 (https://espi.eu; contact: matija.rencelj@espi.eu)"
