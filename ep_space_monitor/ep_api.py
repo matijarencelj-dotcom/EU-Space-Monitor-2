@@ -380,14 +380,27 @@ def parse_oj(data: object, fallback_url: str = "") -> Agenda | None:
     )
 
 
+def _language_value(mapping: object) -> str:
+    """Best value from a language-tagged dict: English, else the first present.
+
+    Some questions (rarely) have no English expression; the Open Data API
+    still returns the title in whatever language exists. Prefer "en", then
+    fall back to the first non-empty language instead of dropping the record.
+    """
+    if not isinstance(mapping, dict):
+        return ""
+    value = mapping.get("en")
+    if value:
+        return value
+    for candidate in mapping.values():
+        if candidate:
+            return candidate
+    return ""
+
+
 def _expression_titles(expression: dict) -> tuple[str, str]:
-    title, alt = "", ""
-    for lang, value in (expression.get("title") or {}).items():
-        if lang == "en":
-            title = value
-    for lang, value in (expression.get("title_alternative") or {}).items():
-        if lang == "en":
-            alt = value
+    title = _language_value(expression.get("title"))
+    alt = _language_value(expression.get("title_alternative"))
     return title, alt
 
 
