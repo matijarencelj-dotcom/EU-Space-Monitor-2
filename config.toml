@@ -82,7 +82,7 @@ subject_prefix = "EP Space Monitor"
 # environment variable below (never store it in this file).
 smtp_host = "smtp-relay.brevo.com"
 smtp_port = 587
-smtp_user = ""                      # Brevo account e-mail / SMTP login
+smtp_user = "matija.rencelj@gmail.com"  # Brevo account e-mail / SMTP login
 smtp_password_env = "EP_SPACE_MONITOR_SMTP_PASSWORD"
 
 [network]
