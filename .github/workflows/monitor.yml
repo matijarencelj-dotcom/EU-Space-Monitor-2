@@ -1,0 +1,62 @@
+name: EP Space Monitor
+
+on:
+  schedule:
+    # Daily at 06:30 UTC (08:30 Brussels time), before committee days begin.
+    - cron: "30 6 * * *"
+  workflow_dispatch:
+    inputs:
+      backfill_months:
+        description: "Backfill horizon in months (0 = normal daily run)"
+        required: false
+        default: "0"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ep-space-monitor
+  cancel-in-progress: false
+
+jobs:
+  test:
+    name: Unit tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt && pip install -e ".[test]"
+      - run: pytest -v
+
+  monitor:
+    name: Daily monitoring run
+    runs-on: ubuntu-latest
+    needs: test
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt && pip install -e .
+
+      - name: Run the monitor
+        env:
+          EP_SPACE_MONITOR_SMTP_PASSWORD: ${{ secrets.BREVO_SMTP_KEY }}
+        run: |
+          ep-space-monitor run --config config.toml --backfill-months "${{ github.event.inputs.backfill_months || '0' }}"
+
+      # Persist state so alerts never repeat, and publish the dashboard
+      # (optionally enable GitHub Pages on the gh-pages branch).
+      - name: Commit state, findings and dashboard
+        run: |
+          git config user.name "espi-monitor-bot"
+          git config user.email "actions@github.com"
+          git add data
+          git diff --cached --quiet && echo "Nothing new to commit" && exit 0
+          git commit -m "EP Space Monitor run: $(date -u +%F)"
+          git push
