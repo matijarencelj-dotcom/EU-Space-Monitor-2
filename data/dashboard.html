@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP Space Monitor — ESPI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700;900&family=Gugi&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0C1112; --panel: #240D16; --razzmatazz: #E82275;
+  --aquamarine: #8ACCD0; --text: #EAE6E9; --muted: #9A9298;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg); color: var(--text);
+  font-family: "Tenorite", "Segoe UI", Arial, sans-serif;
+  line-height: 1.55; min-height: 100vh;
+}
+.wrap { max-width: 1080px; margin: 0 auto; padding: 32px 24px 64px; }
+h1, h2, h3, .stat-num { font-family: "Raleway", "Segoe UI", Arial, sans-serif; font-weight: 900; text-transform: uppercase; letter-spacing: .04em; }
+header { display: flex; flex-wrap: wrap; align-items: baseline; gap: 14px; border-bottom: 2px solid var(--razzmatazz); padding-bottom: 18px; margin-bottom: 8px; }
+.wordmark { font-family: "Gugi", "Raleway", sans-serif; color: var(--aquamarine); font-size: 1.9rem; }
+h1 { font-size: 1.55rem; }
+h1 .accent { color: var(--razzmatazz); }
+.subtitle { color: var(--muted); font-size: .95rem; margin: 8px 0 24px; }
+.stats { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 26px; }
+.stat { background: var(--panel); border-left: 3px solid var(--aquamarine); padding: 12px 18px; min-width: 130px; }
+.stat-num { font-size: 1.5rem; color: var(--aquamarine); }
+.stat-label { color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; }
+.filters { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 26px; }
+.chip { border: 1px solid var(--aquamarine); background: transparent; color: var(--aquamarine); padding: 5px 14px; border-radius: 999px; cursor: pointer; font-size: .8rem; font-family: inherit; }
+.chip.active, .chip:hover { background: var(--aquamarine); color: var(--bg); }
+input#search { background: var(--panel); border: 1px solid var(--panel); border-bottom: 1px solid var(--aquamarine); color: var(--text); padding: 7px 12px; min-width: 220px; font-family: inherit; font-size: .85rem; outline: none; }
+.date-section { margin-bottom: 30px; }
+h2 { font-size: 1.05rem; color: var(--aquamarine); border-bottom: 1px solid var(--gondola-border, #2b1a24); padding-bottom: 6px; margin-bottom: 14px; }
+.date-section > h2 span { color: var(--muted); font-weight: 400; text-transform: none; letter-spacing: 0; font-family: "Tenorite", Arial, sans-serif; font-size: .8rem; }
+.card { background: var(--panel); border: 1px solid #2b1a24; border-left: 3px solid var(--razzmatazz); padding: 16px 18px; margin-bottom: 12px; }
+.card.hidden { display: none; }
+.card-top { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 8px; }
+.kind { font-size: .68rem; letter-spacing: .12em; padding: 2px 8px; border-radius: 3px; text-transform: uppercase; font-weight: 700; }
+.kind.OJ { background: var(--aquamarine); color: var(--bg); }
+.kind.PQ { background: var(--razzmatazz); color: #fff; }
+.kind.PS { background: #F6A800; color: #0C1112; }
+.kind.LX { background: #5C8BC3; color: #fff; }
+.kind.PV { background: var(--razzmatazz); color: #fff; }
+.committee { font-size: .7rem; font-weight: 900; padding: 2px 10px; border-radius: 999px; letter-spacing: .1em; }
+.item-no { color: var(--muted); font-size: .78rem; }
+.score { color: var(--razzmatazz); font-weight: 700; font-size: .78rem; margin-left: auto; }
+.card h3 { font-size: .95rem; text-transform: none; letter-spacing: 0; margin-bottom: 6px; font-weight: 700; }
+.keywords { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+.kw { font-size: .72rem; border: 1px solid var(--razzmatazz); color: var(--razzmatazz); padding: 1px 9px; border-radius: 999px; }
+.excerpt { color: var(--muted); font-size: .85rem; font-style: italic; margin-bottom: 10px; }
+a.src { color: var(--aquamarine); font-size: .78rem; text-decoration: none; border-bottom: 1px dotted var(--aquamarine); }
+a.src:hover { color: #fff; border-color: #fff; }
+.empty { color: var(--muted); font-style: italic; padding: 30px 0; text-align: center; }
+footer { margin-top: 40px; color: var(--muted); font-size: .75rem; border-top: 1px solid #2b1a24; padding-top: 14px; }
+footer b { color: var(--aquamarine); }
+</style>
+</head>
+<body>
+<div class="wrap"><header><span class="wordmark">ESPI</span><h1>EP Space Monitor <span class="accent">//</span> EU space sector watch</h1></header><p class="subtitle">EP committee agendas, parliamentary questions, plenary debates and EUR-Lex/Council documents flagged for space-sector relevance: EU Space Programme, Galileo, Copernicus, IRIS², EU Space Act, launchers, space defence &amp; security, satellites, ESA, EUSPA.</p><div class="stats"><div class="stat"><div class="stat-num">5</div><div class="stat-label">flagged items</div></div><div class="stat"><div class="stat-num">1</div><div class="stat-label">from agendas</div></div><div class="stat"><div class="stat-num">1</div><div class="stat-label">from questions</div></div><div class="stat"><div class="stat-num">0</div><div class="stat-label">from plenary</div></div><div class="stat"><div class="stat-num">3</div><div class="stat-label">from eur-lex</div></div><div class="stat"><div class="stat-num">3</div><div class="stat-label">committees</div></div></div><div class="filters"><button class="chip active" data-committee="ALL">All committees</button><button class="chip" data-committee="EP">EP</button><button class="chip" data-committee="EU">EU</button><button class="chip" data-committee="SEDE">SEDE</button><input id="search" type="search" placeholder="Filter items… (e.g. Galileo)"></div><div class="date-section" data-date="2026-10-12"><h2>Monday, 12 October 2026 <span>— 1 space-relevant item(s)</span></h2><div class="card" data-committee="EU"><div class="card-top"><span class="kind LX">eur-lex</span><span class="committee" style="background:#8ACCD01a;color:#8ACCD0;border:1px solid #8ACCD0;">EU</span><span class="score">score 4.0</span></div><h3>EU SST, Space Surveillance and Tracking : ensuring space and sustainability : facts and figures</h3><div class="keywords"><span class="kw">space surveillance</span><span class="kw">space</span></div><p class="excerpt">EU SST, Space Surveillance and Tracking : ensuring space and sustainability : facts and figures</p><a class="src" href="https://op.europa.eu/en/publication-detail/-/publication/30416620-c6ad-11f1-bfcb-01aa75ed71a1" target="_blank" rel="noopener">View source document ↗</a></div></div><div class="date-section" data-date="2026-10-09"><h2>Friday, 09 October 2026 <span>— 2 space-relevant item(s)</span></h2><div class="card" data-committee="EU"><div class="card-top"><span class="kind LX">eur-lex</span><span class="committee" style="background:#8ACCD01a;color:#8ACCD0;border:1px solid #8ACCD0;">EU</span><span class="score">score 12.5</span></div><h3>Council Decision (EU) 2026/2322 of 9 October 2026 on the conclusion of the Agreement between the European Union and the Kingdom of Norway laying down the rules for participation of the Kingdom of Norway in the GOVSATCOM component of the Union Space Programme and in the Union Secure Connectivity Programme, and for access to GOVSATCOM services and to the governmental services of the Union Secure Connectivity Programme</h3><div class="keywords"><span class="kw">union space programme</span><span class="kw">space programme</span><span class="kw">secure connectivity</span><span class="kw">govsatcom</span><span class="kw">space</span></div><p class="excerpt">…down the rules for participation of the Kingdom of Norway in the GOVSATCOM component of the Union Space Programme and in the Union Secure Connectivity Programme, and for access to GOVSATCOM services and to the governmental services of the Union Secure Connectivity Programme</p><a class="src" href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026D2322" target="_blank" rel="noopener">View source document ↗</a></div><div class="card" data-committee="EU"><div class="card-top"><span class="kind LX">eur-lex</span><span class="committee" style="background:#8ACCD01a;color:#8ACCD0;border:1px solid #8ACCD0;">EU</span><span class="score">score 12.5</span></div><h3>Council Decision (EU) 2026/2351 of 9 October 2026 on the conclusion of the Agreement between the European Union and Iceland laying down the rules for participation of Iceland in the GOVSATCOM component of the Union Space Programme and in the Union Secure Connectivity Programme, and for access to GOVSATCOM services and to the governmental services of the Union Secure Connectivity Programme</h3><div class="keywords"><span class="kw">union space programme</span><span class="kw">space programme</span><span class="kw">secure connectivity</span><span class="kw">govsatcom</span><span class="kw">space</span></div><p class="excerpt">…celand laying down the rules for participation of Iceland in the GOVSATCOM component of the Union Space Programme and in the Union Secure Connectivity Programme, and for access to GOVSATCOM services and to the governmental services of the Union Secure Connectivity Programme</p><a class="src" href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026D2351" target="_blank" rel="noopener">View source document ↗</a></div></div><div class="date-section" data-date="2026-10-01"><h2>Thursday, 01 October 2026 <span>— 1 space-relevant item(s)</span></h2><div class="card" data-committee="SEDE"><div class="card-top"><span class="kind OJ">agenda</span><span class="committee" style="background:#D728281a;color:#D72828;border:1px solid #D72828;">SEDE</span><span class="item-no">item 4 · doc #4</span><span class="score">score 7.0</span></div><h3>Exchange of views with Andrius Kubilius, European Commissioner for Defence and Space, on the implementation of the Commissioner&#x27;s Defence priorities</h3><div class="keywords"><span class="kw">commissioner for defence and space</span><span class="kw">defence and space</span><span class="kw">space</span></div><p class="excerpt">Exchange of views with Andrius Kubilius, European Commissioner for Defence and Space, on the implementation of the Commissioner&#x27;s Defence priorities</p><a class="src" href="https://www.europarl.europa.eu/meetdocs/2024_2029/plmrep/COMMITTEES/SEDE/OJ/2026/10-01/1351336EN.pdf" target="_blank" rel="noopener">View source document ↗</a></div></div><div class="date-section" data-date="2026-06-24"><h2>Wednesday, 24 June 2026 <span>— 1 space-relevant item(s)</span></h2><div class="card" data-committee="EP"><div class="card-top"><span class="kind PQ">question</span><span class="committee" style="background:#8ACCD01a;color:#8ACCD0;border:1px solid #8ACCD0;">EP</span><span class="score">score 4.0</span></div><h3>Russian satellites causing interference with GPS signals across Europe</h3><div class="keywords"><span class="kw">satellites</span></div><p class="excerpt">Russian satellites causing interference with GPS signals across Europe Priority question for written answer P-002590/2026 - to the Commission - Rule 144 - Bart Groothuis (Renew)</p><a class="src" href="https://data.europarl.europa.eu/distribution/reds_iMaQp/P-10-2026-002590/P-10-2026-002590_en.docx" target="_blank" rel="noopener">View source document ↗</a></div></div></div><footer>Generated by <b>EP Space Monitor</b> for ESPI · European Space Policy Institute · last run: 2026-10-23T09:28:55+00:00</footer>
+<script>
+(function () {
+  var active = "ALL";
+  var cards = document.querySelectorAll("[data-committee]");
+  var buttons = document.querySelectorAll(".chip[data-committee]");
+  var search = document.getElementById("search");
+  function apply() {
+    var q = (search.value || "").toLowerCase();
+    cards.forEach(function (card) {
+      var okCommittee = active === "ALL" || card.dataset.committee === active;
+      var okText = !q || card.textContent.toLowerCase().indexOf(q) !== -1;
+      card.classList.toggle("hidden", !(okCommittee && okText));
+    });
+    document.querySelectorAll(".date-section").forEach(function (section) {
+      var visible = section.querySelectorAll(".card:not(.hidden)").length > 0;
+      section.style.display = visible ? "" : "none";
+    });
+  }
+  buttons.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      active = btn.dataset.committee;
+      buttons.forEach(function (b) { b.classList.toggle("active", b === btn); });
+      apply();
+    });
+  });
+  search.addEventListener("input", apply);
+})();
+</script>
+</body>
+</html>
