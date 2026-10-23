@@ -1,0 +1,296 @@
+# EP Space Monitor — weighted space-sector keywords.
+#
+# Every agenda/minutes item is scored against these terms. An item is
+# flagged when the summed weights of matched keywords reach the threshold.
+# Keys are matched case-insensitively; single tokens are matched with word
+# boundaries (so "ESA" does not match inside longer words). Multi-word
+# phrases are matched as substrings of the item text.
+#
+# Weight ideas: 1.0 = weak/context signal, 2-3 = solid signal,
+# 3.5-4 = unmistakably space.
+
+version = 2
+
+[scoring]
+threshold = 2.0
+excerpt_chars = 260
+
+[keywords.en]
+# --- EU Space Programme family ---
+"eu space programme"          = 3.5
+"union space programme"      = 3.5
+"space programme"             = 2.5
+"space programme committee"   = 3.5
+"eu space act"                = 4.0
+"space act"                   = 2.5
+"space package"               = 3.5
+"space regulation"            = 2.0
+
+# --- Programmes & systems ---
+"galileo"                     = 3.0
+"egnos"                        = 3.0
+"copernicus"                   = 3.0
+"iris²"                        = 4.0
+"iris2"                        = 4.0
+"iris squared"                 = 3.0
+"secure connectivity"          = 2.0
+"govsatcom"                    = 3.5
+"satellite navigation"         = 2.5
+"satnav"                       = 2.5
+
+# --- Agencies & institutions ---
+"euspa"                        = 3.5
+"european union agency for the space programme" = 3.5
+"european space agency"        = 3.0
+"esa"                          = 2.0
+"dg defis"                     = 2.0
+"commissioner for defence and space" = 3.0
+
+# --- Policy & sector ---
+"space sector"                 = 3.0
+"space policy"                 = 2.5
+"space strategy"               = 2.5
+"space industry"               = 2.5
+"space economy"                = 2.5
+"space law"                    = 2.5
+"space exploration"            = 2.0
+"space affairs"                = 2.0
+"space policy department"      = 2.5
+
+# --- Launchers & infrastructure ---
+"launcher"                     = 2.0
+"launch vehicle"               = 2.5
+"ariane"                       = 2.5
+"vega"                         = 1.5
+
+# --- Security & safety ---
+"space defence"                = 3.0
+"space defense"                = 3.0
+"defence and space"            = 3.0
+"defense and space"            = 3.0
+"space security"               = 3.0
+"space situational awareness"  = 3.0
+"space surveillance"           = 3.0
+"space debris"                 = 3.0
+"space weather"                = 2.0
+"space safety"                 = 2.0
+
+# --- Generic (weak signals; several are needed to cross the threshold) ---
+"satellite"                    = 2.0
+"satellites"                   = 2.0
+"earth observation"           = 2.0
+"space station"                = 2.0
+"outer space"                  = 1.5
+"space"                        = 1.0
+
+# --- International space activity (still EU-relevant: E-002326/2026) ---
+"nasa"                         = 2.0
+"lunar"                        = 2.5
+"moon"                         = 1.5
+"artemis"                      = 2.0
+
+# --- Navigation, positioning & signals of opportunity ---
+"gnss"                         = 3.0
+"egnss"                        = 3.0
+"gps"                          = 1.5
+"beidou"                       = 2.0
+"glonass"                      = 2.0
+"jamming"                      = 1.5
+"spoofing"                     = 1.5
+"prs"                          = 1.5
+
+# --- Earth observation, science & research ---
+"sentinel"                     = 2.0
+"remote sensing"               = 2.5
+"geospatial"                   = 2.0
+"euclid"                       = 2.0
+"cassini"                      = 2.5
+"exoplanet"                    = 2.5
+"astrophysics"                 = 2.5
+"space science"                = 2.0
+"space research"               = 2.0
+"microgravity"                 = 2.5
+"satellite imagery"            = 2.5
+"satellite data"               = 2.0
+"satellite services"           = 2.0
+
+# --- Quantum & secure communications ---
+"quantum communication"       = 3.0
+"quantum key distribution"    = 3.0
+"euroqci"                      = 3.5
+
+# --- Space safety, debris & sustainability ---
+"space traffic management"     = 3.5
+"active debris removal"        = 3.5
+"orbital debris"               = 3.0
+"kessler"                      = 2.5
+"space sustainability"         = 3.0
+"space-based"                  = 2.0
+"planetary defence"            = 3.0
+"planetary defense"            = 3.0
+"asteroid"                     = 2.0
+"near-earth object"            = 3.0
+"near earth object"            = 3.0
+"space domain awareness"       = 3.0
+"space awareness"              = 2.0
+"reentry"                      = 1.5
+"re-entry"                     = 1.5
+"orbit"                        = 1.5
+"orbital"                      = 1.5
+"geostationary"                = 2.0
+
+# --- Governance, diplomacy & international law ---
+"space governance"             = 3.0
+"space diplomacy"              = 3.0
+"space treaty"                 = 3.0
+"copuos"                       = 3.0
+"artemis accords"              = 3.5
+
+# --- Military space & counterspace ---
+"militarisation of space"      = 3.0
+"militarization of space"      = 3.0
+"weaponisation of space"       = 3.5
+"weaponization of space"       = 3.5
+"anti-satellite"               = 3.5
+"asat"                         = 2.5
+"counterspace"                 = 3.0
+"eusst"                        = 3.0
+"eu sst"                       = 3.5
+
+# --- Exploration, humans & space economy ---
+"human spaceflight"            = 3.0
+"astronaut"                    = 2.5
+"iss"                          = 2.0
+"space tourism"                = 3.0
+"space mining"                 = 3.0
+"space resources"              = 3.0
+"mars"                         = 1.5
+"space medicine"               = 2.5
+
+# --- Industry, launch & small satellites ---
+"newspace"                     = 2.5
+"smallsat"                     = 2.0
+"cubesat"                      = 2.5
+"nanosatellite"                = 2.5
+"constellation"                = 1.5
+"megaconstellation"            = 3.0
+"spaceport"                    = 2.5
+"reusable launcher"            = 3.0
+"space rider"                  = 3.0
+"space startup"                = 2.5
+"spacetech"                    = 2.5
+
+[keywords.fr]
+"programme spatial"            = 3.0
+"politique spatiale"           = 2.5
+"secteur spatial"              = 3.0
+"sécurité spatiale"            = 3.0
+"défense spatiale"             = 3.0
+"satellite"                    = 2.0
+"satellites"                   = 2.0
+"lanceur"                      = 2.0
+"lanceurs"                     = 2.0
+"observation de la terre"      = 2.0
+"galilée"                       = 3.0
+"copernicus"                   = 3.0
+"galileo"                      = 3.0
+"agence spatiale européenne"   = 3.0
+"agence de l'union européenne pour le programme spatial" = 3.5
+
+# --- Débris, durabilité et sécurité spatiale ---
+"débris spatiaux"              = 3.0
+"débris spatial"               = 3.0
+"gestion du trafic spatial"   = 3.5
+"surveillance spatiale"       = 2.5
+"durabilité spatiale"         = 3.0
+"suivi des objets spatiaux"    = 2.5
+
+# --- Exploration et vols habités ---
+"exploration spatiale"         = 2.5
+"station spatiale"             = 2.5
+"vol habité"                   = 3.0
+"astronaute"                   = 2.5
+"tourisme spatial"              = 3.0
+"base lunaire"                 = 2.5
+"lune"                          = 1.5
+"lunaire"                       = 2.0
+"artémis"                       = 2.0
+"microgravité"                 = 2.5
+
+# --- Droit, gouvernance et politique spatiale ---
+"droit de l'espace"            = 2.5
+"gouvernance spatiale"         = 3.0
+"ressources spatiales"         = 3.0
+"militarisation de l'espace"  = 3.0
+"défense planétaire"           = 2.5
+
+# --- Observation, navigation et communications ---
+"télédétection"                = 2.5
+"imagerie satellitaire"       = 2.5
+"données satellitaires"       = 2.0
+"navigation par satellite"    = 2.5
+"constellation de satellites"  = 3.0
+"communication quantique"     = 3.0
+"répartition quantique"        = 2.5
+"port spatial"                 = 2.5
+"lanceur réutilisable"         = 3.0
+"orbite"                       = 1.5
+"orbital"                      = 1.5
+"géostationnaire"              = 2.0
+"rentrée atmosphérique"        = 1.5
+
+[keywords.de]
+"weltraumprogramm"             = 3.0
+"weltraumpolitik"              = 2.5
+"weltraumwirtschaft"           = 2.5
+"weltraumsicherheit"           = 3.0
+"weltraumverteidigung"         = 3.0
+"raumfahrt"                    = 2.0
+"satellit"                     = 2.0
+"trägerrakete"                 = 2.5
+"erdbeobachtung"               = 2.0
+"galileo"                      = 3.0
+"kopernikus"                   = 3.0
+"europäische weltraumorganisation" = 3.0
+
+# --- Trümmer, Nachhaltigkeit und Sicherheit ---
+"weltraumtrümmer"              = 3.0
+"trümmerkette"                 = 2.5
+"aktive trümmerbeseitigung"    = 3.5
+"orbitaler trümmer"            = 3.0
+"raumverkehrsführung"          = 3.5
+"weltraumnachhaltigkeit"       = 3.0
+"weltraumüberwachung"          = 2.5
+"weltraumlagebewusstsein"      = 3.0
+"wiedereintritt"               = 1.5
+"erdorbit"                     = 2.0
+"geostationär"                 = 2.0
+
+# --- Exploration und bemannte Raumfahrt ---
+"weltraumforschung"            = 2.0
+"weltraumstation"              = 2.5
+"bemannte raumfahrt"           = 3.0
+"astronaut"                    = 2.5
+"mikrogravitation"             = 2.5
+"weltraumtourismus"            = 3.0
+"mondbasis"                    = 2.5
+"weltraummedizin"              = 2.5
+
+# --- Recht, Ressourcen und Politik ---
+"weltraumrecht"                = 2.5
+"weltraumressourcen"           = 3.0
+"weltraumdiplomatie"           = 3.0
+"weltraumvertrag"              = 3.0
+"weltraumbahnhof"              = 2.5
+"wiederverwendbare trägerrakete" = 3.0
+"weltraumstartanlage"          = 2.5
+
+# --- Kommunikation und Beobachtung ---
+"quantenkommunikation"         = 3.0
+"quantenschlüsselverteilung"   = 3.0
+"satellitenkonstellation"      = 2.5
+"kleinsatellit"                = 2.5
+"raumfahrtbehörde"             = 2.5
+"satellitendaten"              = 2.0
+"satellitenbilder"             = 2.5
+"fernerkundung"                = 2.5
