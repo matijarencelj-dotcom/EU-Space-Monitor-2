@@ -16475,6 +16475,22 @@
     "PQ:P-10-2026-000001": {
       "url": "https://data.europarl.europa.eu/api/v2/parliamentary-questions/P-10-2026-000001",
       "processed_at": "2026-10-29T13:41:37+00:00"
+    },
+    "PQ:P-10-2026-004326": {
+      "url": "https://data.europarl.europa.eu/distribution/reds_iMaQp/P-10-2026-004326/P-10-2026-004326_en.docx",
+      "processed_at": "2026-10-30T13:22:23+00:00"
+    },
+    "PQ:P-10-2026-004329": {
+      "url": "https://data.europarl.europa.eu/distribution/reds_iMaQp/P-10-2026-004329/P-10-2026-004329_en.pdf",
+      "processed_at": "2026-10-30T13:22:24+00:00"
+    },
+    "PQ:P-10-2026-004330": {
+      "url": "https://data.europarl.europa.eu/distribution/reds_iMaQp/P-10-2026-004330/P-10-2026-004330_en.pdf",
+      "processed_at": "2026-10-30T13:22:36+00:00"
+    },
+    "LX:immc:ST 15118 2026 INIT": {
+      "url": "https://op.europa.eu/en/publication-detail/-/publication/44a532fb-d3be-11f1-9458-01aa75ed71a1",
+      "processed_at": "2026-10-30T13:23:30+00:00"
     }
   },
   "pending": {},
@@ -16485,6 +16501,7 @@
     "LX:celex:32026D2322",
     "LX:celex:32026D2351",
     "LX:genpub:2026.75422",
+    "LX:immc:ST 15118 2026 INIT",
     "OJ:SEDE(2026)1001_1#item4",
     "PQ:E-10-2026-002070",
     "PQ:E-10-2026-002240",
@@ -16495,7 +16512,7 @@
     "PQ:P-10-2026-002590"
   ],
   "meta": {
-    "pq_offset_2026": 4092,
+    "pq_offset_2026": 4126,
     "pq_scan_v2_2026": true
   }
 }
