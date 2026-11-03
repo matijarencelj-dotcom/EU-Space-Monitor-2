@@ -16495,6 +16495,18 @@
     "OJ:BUDG(2026)1104_1": {
       "url": "https://www.europarl.europa.eu/meetdocs/2024_2029/plmrep/COMMITTEES/CJ13/OJ/2026/11-04/1353501EN.pdf",
       "processed_at": "2026-10-31T12:57:20+00:00"
+    },
+    "PQ:P-10-2026-004397": {
+      "url": "https://data.europarl.europa.eu/distribution/reds_iMaQp/P-10-2026-004397/P-10-2026-004397_en.docx",
+      "processed_at": "2026-11-03T14:33:42+00:00"
+    },
+    "PQ:P-10-2026-004400": {
+      "url": "https://data.europarl.europa.eu/distribution/reds_iMaQp/P-10-2026-004400/P-10-2026-004400_en.docx",
+      "processed_at": "2026-11-03T14:33:43+00:00"
+    },
+    "PQ:P-10-2026-004429": {
+      "url": "https://data.europarl.europa.eu/distribution/reds_iMaQp/P-10-2026-004429/P-10-2026-004429_en.docx",
+      "processed_at": "2026-11-03T14:33:43+00:00"
     }
   },
   "pending": {},
@@ -16516,7 +16528,7 @@
     "PQ:P-10-2026-002590"
   ],
   "meta": {
-    "pq_offset_2026": 4126,
+    "pq_offset_2026": 4143,
     "pq_scan_v2_2026": true
   }
 }
