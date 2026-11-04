@@ -16507,6 +16507,22 @@
     "PQ:P-10-2026-004429": {
       "url": "https://data.europarl.europa.eu/distribution/reds_iMaQp/P-10-2026-004429/P-10-2026-004429_en.docx",
       "processed_at": "2026-11-03T14:33:43+00:00"
+    },
+    "PQ:P-10-2026-004414": {
+      "url": "https://data.europarl.europa.eu/distribution/reds_iMaQp/P-10-2026-004414/P-10-2026-004414_en.docx",
+      "processed_at": "2026-11-04T14:47:46+00:00"
+    },
+    "PQ:P-10-2026-004426": {
+      "url": "https://data.europarl.europa.eu/distribution/reds_iMaQp/P-10-2026-004426/P-10-2026-004426_en.pdf",
+      "processed_at": "2026-11-04T14:47:49+00:00"
+    },
+    "PQ:P-10-2026-004441": {
+      "url": "https://data.europarl.europa.eu/distribution/reds_iMaQp/P-10-2026-004441/P-10-2026-004441_en.pdf",
+      "processed_at": "2026-11-04T14:47:50+00:00"
+    },
+    "FT:d91ce41e-76ca-4a06-8a3c-7a112b6eff6d-CN": {
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/d91ce41e-76ca-4a06-8a3c-7a112b6eff6d-CN",
+      "processed_at": "2026-11-04T14:48:12+00:00"
     }
   },
   "pending": {},
@@ -16514,6 +16530,7 @@
     "FT:40eec3d2-552f-492d-839a-d2ea70e06cc3-PIN",
     "FT:ac967896-e1d7-4cab-b323-a05afbb9f4d3-CN",
     "FT:ca74904c-8716-451a-83be-2c1aaf5fa805-CN",
+    "FT:d91ce41e-76ca-4a06-8a3c-7a112b6eff6d-CN",
     "LX:celex:32026D2322",
     "LX:celex:32026D2351",
     "LX:genpub:2026.75422",
@@ -16528,7 +16545,7 @@
     "PQ:P-10-2026-002590"
   ],
   "meta": {
-    "pq_offset_2026": 4143,
+    "pq_offset_2026": 4162,
     "pq_scan_v2_2026": true
   }
 }
