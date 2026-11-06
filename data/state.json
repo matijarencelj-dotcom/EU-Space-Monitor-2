@@ -16535,6 +16535,18 @@
     "LX:immc:CM 4724 2026 INIT": {
       "url": "https://op.europa.eu/en/publication-detail/-/publication/b262cf26-d871-11f1-8501-01aa75ed71a1",
       "processed_at": "2026-11-05T14:52:51+00:00"
+    },
+    "PQ:P-10-2026-004388": {
+      "url": "https://data.europarl.europa.eu/distribution/reds_iMaQp/P-10-2026-004388/P-10-2026-004388_en.pdf",
+      "processed_at": "2026-11-06T14:30:33+00:00"
+    },
+    "PQ:P-10-2026-004450": {
+      "url": "https://data.europarl.europa.eu/distribution/reds_iMaQp/P-10-2026-004450/P-10-2026-004450_en.pdf",
+      "processed_at": "2026-11-06T14:30:35+00:00"
+    },
+    "PQ:P-10-2026-004499": {
+      "url": "https://data.europarl.europa.eu/distribution/reds_iMaQp/P-10-2026-004499/P-10-2026-004499_en.pdf",
+      "processed_at": "2026-11-06T14:30:36+00:00"
     }
   },
   "pending": {},
@@ -16557,7 +16569,7 @@
     "PQ:P-10-2026-002590"
   ],
   "meta": {
-    "pq_offset_2026": 4186,
+    "pq_offset_2026": 4202,
     "pq_scan_v2_2026": true
   }
 }
