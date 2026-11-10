@@ -16567,6 +16567,22 @@
     "LX:immc:ST 14787 2026 INIT": {
       "url": "https://op.europa.eu/en/publication-detail/-/publication/009ac6af-dc4a-11f1-8501-01aa75ed71a1",
       "processed_at": "2026-11-09T16:45:33+00:00"
+    },
+    "PQ:P-10-2026-004504": {
+      "url": "https://data.europarl.europa.eu/distribution/reds_iMaQp/P-10-2026-004504/P-10-2026-004504_en.pdf",
+      "processed_at": "2026-11-10T15:09:03+00:00"
+    },
+    "PQ:P-10-2026-004532": {
+      "url": "https://data.europarl.europa.eu/distribution/reds_iMaQp/P-10-2026-004532/P-10-2026-004532_en.pdf",
+      "processed_at": "2026-11-10T15:09:08+00:00"
+    },
+    "PQ:P-10-2026-004538": {
+      "url": "https://data.europarl.europa.eu/distribution/reds_iMaQp/P-10-2026-004538/P-10-2026-004538_en.docx",
+      "processed_at": "2026-11-10T15:09:09+00:00"
+    },
+    "PQ:P-10-2026-004564": {
+      "url": "https://data.europarl.europa.eu/distribution/reds_iMaQp/P-10-2026-004564/P-10-2026-004564_en.docx",
+      "processed_at": "2026-11-10T15:09:10+00:00"
     }
   },
   "pending": {},
@@ -16591,7 +16607,7 @@
     "PQ:P-10-2026-002590"
   ],
   "meta": {
-    "pq_offset_2026": 4215,
+    "pq_offset_2026": 4239,
     "pq_scan_v2_2026": true
   }
 }
