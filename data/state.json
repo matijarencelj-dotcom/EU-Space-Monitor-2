@@ -16583,6 +16583,10 @@
     "PQ:P-10-2026-004564": {
       "url": "https://data.europarl.europa.eu/distribution/reds_iMaQp/P-10-2026-004564/P-10-2026-004564_en.docx",
       "processed_at": "2026-11-10T15:09:10+00:00"
+    },
+    "PQ:P-10-2026-004563": {
+      "url": "https://data.europarl.europa.eu/distribution/reds_iMaQp/P-10-2026-004563/P-10-2026-004563_en.docx",
+      "processed_at": "2026-11-11T14:39:23+00:00"
     }
   },
   "pending": {},
@@ -16607,7 +16611,7 @@
     "PQ:P-10-2026-002590"
   ],
   "meta": {
-    "pq_offset_2026": 4239,
+    "pq_offset_2026": 4292,
     "pq_scan_v2_2026": true
   }
 }
