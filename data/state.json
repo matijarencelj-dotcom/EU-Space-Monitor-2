@@ -16587,6 +16587,22 @@
     "PQ:P-10-2026-004563": {
       "url": "https://data.europarl.europa.eu/distribution/reds_iMaQp/P-10-2026-004563/P-10-2026-004563_en.docx",
       "processed_at": "2026-11-11T14:39:23+00:00"
+    },
+    "PQ:P-10-2026-004576": {
+      "url": "https://data.europarl.europa.eu/distribution/reds_iMaQp/P-10-2026-004576/P-10-2026-004576_en.docx",
+      "processed_at": "2026-11-12T15:30:57+00:00"
+    },
+    "PQ:P-10-2026-004590": {
+      "url": "https://data.europarl.europa.eu/distribution/reds_iMaQp/P-10-2026-004590/P-10-2026-004590_en.docx",
+      "processed_at": "2026-11-12T15:31:00+00:00"
+    },
+    "PQ:P-10-2026-004593": {
+      "url": "https://data.europarl.europa.eu/distribution/reds_iMaQp/P-10-2026-004593/P-10-2026-004593_en.docx",
+      "processed_at": "2026-11-12T15:31:03+00:00"
+    },
+    "PQ:P-10-2026-004640": {
+      "url": "https://data.europarl.europa.eu/distribution/reds_iMaQp/P-10-2026-004640/P-10-2026-004640_en.docx",
+      "processed_at": "2026-11-12T15:31:06+00:00"
     }
   },
   "pending": {},
@@ -16611,7 +16627,7 @@
     "PQ:P-10-2026-002590"
   ],
   "meta": {
-    "pq_offset_2026": 4292,
+    "pq_offset_2026": 4314,
     "pq_scan_v2_2026": true
   }
 }
