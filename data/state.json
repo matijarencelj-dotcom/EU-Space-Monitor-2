@@ -16603,6 +16603,42 @@
     "PQ:P-10-2026-004640": {
       "url": "https://data.europarl.europa.eu/distribution/reds_iMaQp/P-10-2026-004640/P-10-2026-004640_en.docx",
       "processed_at": "2026-11-12T15:31:06+00:00"
+    },
+    "OJ:ITRE(2026)1119_1": {
+      "url": "https://www.europarl.europa.eu/meetdocs/2024_2029/plmrep/COMMITTEES/ITRE/OJ/2026/11-19/1354563EN.pdf",
+      "processed_at": "2026-11-13T14:49:56+00:00"
+    },
+    "OJ:TRAN(2026)1123_1": {
+      "url": "https://emeeting.europarl.europa.eu/emeeting/",
+      "processed_at": "2026-11-13T14:49:56+00:00"
+    },
+    "OJ:BUDG(2026)1119_1": {
+      "url": "https://www.europarl.europa.eu/meetdocs/2024_2029/plmrep/COMMITTEES/BUDG/OJ/2026/11-19/1354647EN.pdf",
+      "processed_at": "2026-11-13T14:49:59+00:00"
+    },
+    "PQ:P-10-2026-004508": {
+      "url": "https://data.europarl.europa.eu/distribution/reds_iMaQp/P-10-2026-004508/P-10-2026-004508_en.docx",
+      "processed_at": "2026-11-13T14:50:01+00:00"
+    },
+    "PQ:P-10-2026-004617": {
+      "url": "https://data.europarl.europa.eu/api/v2/parliamentary-questions/P-10-2026-004617",
+      "processed_at": "2026-11-13T14:50:02+00:00"
+    },
+    "PQ:P-10-2026-004680": {
+      "url": "https://data.europarl.europa.eu/api/v2/parliamentary-questions/P-10-2026-004680",
+      "processed_at": "2026-11-13T14:50:02+00:00"
+    },
+    "LX:celex:52026XX05844": {
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52026XX05844",
+      "processed_at": "2026-11-13T14:50:10+00:00"
+    },
+    "LX:immc:ST 15306 2026 INIT": {
+      "url": "https://op.europa.eu/en/publication-detail/-/publication/5324a1cd-dee6-11f1-ba80-01aa75ed71a1",
+      "processed_at": "2026-11-13T14:50:10+00:00"
+    },
+    "LX:immc:CM 4859 2026 INIT": {
+      "url": "https://op.europa.eu/en/publication-detail/-/publication/79106d1e-dee6-11f1-ba80-01aa75ed71a1",
+      "processed_at": "2026-11-13T14:50:10+00:00"
     }
   },
   "pending": {},
@@ -16613,10 +16649,12 @@
     "FT:d91ce41e-76ca-4a06-8a3c-7a112b6eff6d-CN",
     "LX:celex:32026D2322",
     "LX:celex:32026D2351",
+    "LX:celex:52026XX05844",
     "LX:genpub:2026.75422",
     "LX:immc:ST 14787 2026 INIT",
     "LX:immc:ST 15118 2026 INIT",
     "LX:immc:WK 16801 2026 INIT",
+    "OJ:ITRE(2026)1119_1#item8",
     "OJ:SEDE(2026)1001_1#item4",
     "PQ:E-10-2026-002070",
     "PQ:E-10-2026-002240",
@@ -16627,7 +16665,7 @@
     "PQ:P-10-2026-002590"
   ],
   "meta": {
-    "pq_offset_2026": 4314,
+    "pq_offset_2026": 4330,
     "pq_scan_v2_2026": true
   }
 }
