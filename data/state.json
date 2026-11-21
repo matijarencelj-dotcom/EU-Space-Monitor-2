@@ -16783,6 +16783,14 @@
     "FT:1b6d2c99-781f-43b6-86d3-620e7fed8790-CN": {
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/1b6d2c99-781f-43b6-86d3-620e7fed8790-CN",
       "processed_at": "2026-11-20T15:42:13+00:00"
+    },
+    "PQ:P-10-2026-004815": {
+      "url": "https://data.europarl.europa.eu/distribution/reds_iMaQp/P-10-2026-004815/P-10-2026-004815_en.pdf",
+      "processed_at": "2026-11-21T14:51:40+00:00"
+    },
+    "LX:immc:ST 16000 2026 INIT": {
+      "url": "https://op.europa.eu/en/publication-detail/-/publication/df5d5884-e510-11f1-b745-01aa75ed71a1",
+      "processed_at": "2026-11-21T14:51:47+00:00"
     }
   },
   "pending": {},
@@ -16814,7 +16822,7 @@
     "PQ:P-10-2026-002590"
   ],
   "meta": {
-    "pq_offset_2026": 4463,
+    "pq_offset_2026": 4465,
     "pq_scan_v2_2026": true
   }
 }
