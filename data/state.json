@@ -16863,6 +16863,18 @@
     "FT:39c09f98-5519-4e58-9368-dcc4dc74dd9b-CN": {
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/39c09f98-5519-4e58-9368-dcc4dc74dd9b-CN",
       "processed_at": "2026-11-25T17:31:43+00:00"
+    },
+    "PQ:P-10-2026-004769": {
+      "url": "https://data.europarl.europa.eu/distribution/reds_iMaQp/P-10-2026-004769/P-10-2026-004769_en.pdf",
+      "processed_at": "2026-11-26T17:13:29+00:00"
+    },
+    "LX:immc:ST 16058 2026 INIT": {
+      "url": "https://op.europa.eu/en/publication-detail/-/publication/367eefb5-e9a5-11f1-b745-01aa75ed71a1",
+      "processed_at": "2026-11-26T17:13:38+00:00"
+    },
+    "FT:97ab93e7-ac77-4158-aa1b-ca18e32022d9-PIN": {
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/tender-details/97ab93e7-ac77-4158-aa1b-ca18e32022d9-PIN",
+      "processed_at": "2026-11-26T17:13:39+00:00"
     }
   },
   "pending": {},
@@ -16870,6 +16882,7 @@
     "FT:40eec3d2-552f-492d-839a-d2ea70e06cc3-CN",
     "FT:40eec3d2-552f-492d-839a-d2ea70e06cc3-PIN",
     "FT:5263e8ff-2f4c-4004-9ca4-4c0feb2cdc89-CN",
+    "FT:97ab93e7-ac77-4158-aa1b-ca18e32022d9-PIN",
     "FT:ac967896-e1d7-4cab-b323-a05afbb9f4d3-CN",
     "FT:bde2ecc3-cce4-4395-bb49-28fd8bcc987c-PIN",
     "FT:ca74904c-8716-451a-83be-2c1aaf5fa805-CN",
@@ -16896,7 +16909,7 @@
     "PQ:P-10-2026-002590"
   ],
   "meta": {
-    "pq_offset_2026": 4540,
+    "pq_offset_2026": 4561,
     "pq_scan_v2_2026": true
   }
 }
